@@ -13,7 +13,7 @@ const Prevision = (props) => {
             <View style={styles.itemHour.container}>
               <Text style={styles.itemHour.container.date}>{moment.unix(item.dt).format('dddd D MMMM')}</Text>
               <Text style={styles.itemHour.container.hour}>{moment.unix(item.dt).format('HH[h]mm')}</Text>
-              <Text style={styles.itemHour.container.temperature}>{item.main.temp}°C</Text>
+              <Text style={styles.prevision.text}>{props.data.main ? props.data.main.temp : 'Pas de température'}°C</Text>
             </View>
             <View style={styles.container}>
               <Image style={styles.tinyLogo} source={{uri : `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}}></Image>
@@ -68,3 +68,5 @@ const styles = StyleSheet.create({
         }
       }
 })
+
+export default Prevision;

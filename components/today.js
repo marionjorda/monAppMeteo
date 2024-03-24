@@ -1,20 +1,19 @@
-import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 
 const Today = (props) => {
     return (
         <View style={styles.today}>
             <Text style={styles.today.title}>Météo du jour :</Text>
-            <Text style={styles.today.text}>{props.data.name} : {props.data.main.temp}°C</Text>
+            <Text style={styles.today.text}>{props.data.name} : {props.data.main ? props.data.main.temp : 'Pas de température'}°C</Text>
             <View style={styles.today.container}>
-                <Image style={styles.today.image} source={{uri : `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}}></Image>
-                <Text style={styles.today.description}>{props.data.weather[0].description ? props.data.weather[0].description : 'Aucune description'}</Text>
+              <Image style={styles.today.image} source={{uri : `https://openweathermap.org/img/wn/${props.data.weather && props.data.weather[0] ? props.data.weather[0].icon : 'default_icon'}@2x.png`}}></Image>
+              <Text style={styles.today.description}>{props.data.weather && props.data.weather[0] ? props.data.weather[0].description : 'Aucune description'}</Text>
             </View>
         </View>
     )
 }
-
 
 const styles = StyleSheet.create({
     today: {
