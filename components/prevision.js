@@ -13,7 +13,7 @@ const Prevision = (props) => {
             <View style={styles.itemHour.container}>
               <Text style={styles.itemHour.container.date}>{moment.unix(item.dt).format('dddd D MMMM')}</Text>
               <Text style={styles.itemHour.container.hour}>{moment.unix(item.dt).format('HH[h]mm')}</Text>
-              <Text style={styles.prevision.text}>{props.data.main ? props.data.main.temp : 'Pas de température'}°C</Text>
+              <Text style={styles.prevision.text}>{item.main.temp ? item.main.temp : 'Pas de température'}°C</Text>
             </View>
             <View style={styles.container}>
               <Image style={styles.logo} source={{uri : `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}}></Image>
@@ -27,7 +27,7 @@ const Prevision = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: 130,
+        width: 150,
       },
     logo: {
         width: 50,
@@ -50,10 +50,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: '#000000',
         border: 10,
-        textAlign: 'center',
         text: {
           fontSize: 15,
-          textAlign: 'center',
+          fontWeight: 'bold',
         },
       },
       itemHour: {
