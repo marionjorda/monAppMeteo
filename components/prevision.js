@@ -16,8 +16,8 @@ const Prevision = (props) => {
               <Text style={styles.prevision.text}>{props.data.main ? props.data.main.temp : 'Pas de température'}°C</Text>
             </View>
             <View style={styles.container}>
-              <Image style={styles.tinyLogo} source={{uri : `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}}></Image>
-              <Text>{item.weather[0].description ? item.weather[0].description : 'Aucune desription'}</Text>
+              <Image style={styles.logo} source={{uri : `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}}></Image>
+              <Text style={styles.description}>{item.weather[0].description ? item.weather[0].description : 'Aucune desription'}</Text>
             </View>
           </View>
         }
@@ -26,7 +26,10 @@ const Prevision = (props) => {
 }
 
 const styles = StyleSheet.create({
-    tinyLogo: {
+    container: {
+        width: 130,
+      },
+    logo: {
         width: 50,
         height: 50,
         backgroundColor: '#009FFD',
@@ -34,34 +37,43 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignSelf: 'center',
       },
+      description: {
+        color: '#232528',
+        alignSelf: 'center',
+        padding: 5,
+        textAlign: 'center',
+        textTransform: 'capitalize',
+      },
       prevision: {
-        backgroundColor: '#F1F1F1',
+        backgroundColor: '#8C8CDC',
         padding: 10,
         borderRadius: 10,
         borderColor: '#000000',
         border: 10,
         textAlign: 'center',
+        text: {
+          fontSize: 15,
+          textAlign: 'center',
+        },
       },
       itemHour: {
-        padding: 10,
-        backgroundColor: '#F1F1F1',
+        width: 300,
+        padding: 15,
+        backgroundColor: '#EAF6FF',
         borderRadius: 10,
         marginVertical: 5,
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        textAlign: 'center',
         container : {
             flexDirection: 'column',
-            textAlign: 'center',
             date: {
-                fontSize: 13, 
-                fontWeight: '500', 
-                fontStyle: 'italic',
-                textAlign: 'center'
-            },
-            hour: {
                 fontSize: 20, 
                 fontWeight: 'bold',
-                textAlign: 'center'
+                textTransform: 'capitalize',
+            },
+            hour: {
+                fontSize: 15, 
+                fontStyle: 'italic',
             }
 
         }

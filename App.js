@@ -114,12 +114,13 @@ const styles = StyleSheet.create({
   },
   button : {
     marginVertical: 10,
-    backgroundColor: '#11FF8F',
+    backgroundColor: '#2A2A72',
     padding: 10,
     borderRadius: 10,
     width: 100,
     alignSelf: 'center',
     text: {
+      color: '#FFF',
       fontSize: 20,
       fontWeight: 'bold',
       alignSelf: 'center',
