@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import * as Location from "expo-location";
 import Today from "./components/today";
 import Prevision from "./components/prevision";
-import { API_KEY } from '@env'
+import { API_KEY } from '@env';
 
 export default function App() {
   const APIkey = API_KEY;
