@@ -29,10 +29,10 @@ const styles = StyleSheet.create({
     tinyLogo: {
         width: 50,
         height: 50,
-        backgroundColor: '#199F67',
+        backgroundColor: '#009FFD',
         padding: 2,
         borderRadius: 10,
-        alignSelf: 'flex-end',
+        alignSelf: 'center',
       },
       prevision: {
         backgroundColor: '#F1F1F1',
@@ -40,29 +40,28 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: '#000000',
         border: 10,
+        textAlign: 'center',
       },
       itemHour: {
         padding: 10,
         backgroundColor: '#F1F1F1',
         borderRadius: 10,
         marginVertical: 5,
-        flexDirection: 'row',
         justifyContent: 'space-between',
+        textAlign: 'center',
         container : {
             flexDirection: 'column',
+            textAlign: 'center',
             date: {
                 fontSize: 13, 
                 fontWeight: '500', 
-                fontStyle: 'italic'
+                fontStyle: 'italic',
+                textAlign: 'center'
             },
             hour: {
                 fontSize: 20, 
-                fontWeight: 'bold'
-            },
-            temperature : {
-                fontSize: 17, 
-                fontWeight: '400',
-                color: '#FF111F'
+                fontWeight: 'bold',
+                textAlign: 'center'
             }
 
         }

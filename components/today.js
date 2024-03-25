@@ -17,7 +17,7 @@ const Today = (props) => {
 
 const styles = StyleSheet.create({
     today: {
-        backgroundColor: '#B1F1F1',
+        backgroundColor: '#EDB1F1',
         padding: 10,
         borderRadius: 10,
         borderColor: '#000000',
@@ -25,9 +25,11 @@ const styles = StyleSheet.create({
         title: {
           fontSize: 20,
           fontWeight: 'bold',
+          textAlign: 'center',
         },
         text: {
           fontSize: 15,
+          textAlign: 'center',
         },
         description: {
           fontSize: 13,
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
         image: {
           width: 50,
           height: 50,
-          backgroundColor: '#199F67',
+          backgroundColor: '#EAF6FF',
           padding: 2,
           borderRadius: 10,
           alignSelf: 'center',
